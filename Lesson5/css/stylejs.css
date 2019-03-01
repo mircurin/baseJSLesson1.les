@@ -1,0 +1,58 @@
+body {
+  margin: 0; }
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.letters, .lettersFooter {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: flex-end; }
+  .letters .lettersContainer, .lettersFooter .lettersContainer {
+    width: 816px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .letters .lettersContainer .lettersUnits, .lettersFooter .lettersContainer .lettersUnits {
+      display: flex;
+      justify-content: center;
+      width: 100px; }
+
+.lettersFooter {
+  align-items: flex-start; }
+
+.numbers .numbersContainer, .numbersFooter .numbersContainer {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .numbers .numbersContainer .numbersUnits, .numbersFooter .numbersContainer .numbersUnits {
+    height: 90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px; }
+
+.chessBoard {
+  width: 816px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .chessBoard .chessBoardCellWhite {
+    width: 100px;
+    height: 90px;
+    border: 1px solid black; }
+  .chessBoard .chessBoardCellChocolate {
+    width: 100px;
+    height: 90px;
+    border: 1px solid black;
+    background: chocolate; }
+
+/*# sourceMappingURL=stylejs.css.map */
