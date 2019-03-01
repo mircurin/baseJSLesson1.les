@@ -5,7 +5,7 @@
 // Строки должны нумероваться числами от 1 до 8,
 // столбцы – латинскими буквами A, B, C, D, E, F, G, H.
 
-function numbers(lettersContainer, elementDiv, elementDivName) {
+function numbers(lettersContainer, elementDiv, elementDivName) { //расставляем цыфры
     var $lettersContainer = document.getElementsByClassName(lettersContainer);
     for (var j = 0; j < 2; j++) {
         for (var i = 0; i < 8; i++) {
@@ -17,7 +17,7 @@ function numbers(lettersContainer, elementDiv, elementDivName) {
     }
 }
 
-function letters(elementUnit, elementDiv, elementDivName) {
+function letters(elementUnit, elementDiv, elementDivName) { //расставляем буквы
     var $lettersContainer = document.getElementsByClassName(elementUnit);
     lett = 'abcdefgh'.split('');
     for (var j = 0; j < 2; j++) {
@@ -30,12 +30,12 @@ function letters(elementUnit, elementDiv, elementDivName) {
     }
 }
 
-function BoardCell(elementUnit, elementDiv, elementDivNameWhite, chessBoardCellChocolate) {
+function BoardCell(elementUnit, elementDiv, elementDivNameWhite, chessBoardCellChocolate) {//расставляем цвета
     var $chessBoard = document.getElementsByClassName(elementUnit);
     for (var j = 0; j < 8; j++){
         for(var i = 0; i < 8; i++) {
             var $div = document.createElement(elementDiv);
-            if (colorCell (j, i)) {
+            if (colorCell (j, i)) {//отбор по строке, если true то белый
                 $div.className = elementDivNameWhite;
                 $chessBoard[0].appendChild($div);
             } else {
@@ -46,7 +46,7 @@ function BoardCell(elementUnit, elementDiv, elementDivNameWhite, chessBoardCellC
     }
 }
 
-function colorCell(j, i){
+function colorCell(j, i){ //отбор по строке, если true то белый
     if (j % 2 === 0) {
         if (i % 2 === 0) {
             return true;
@@ -62,6 +62,6 @@ function colorCell(j, i){
     }
 }
 
-letters("lettersContainer", "div", "lettersUnits");
-numbers("numbersContainer", "div", "numbersUnits");
-BoardCell("chessBoard", "div", "chessBoardCellWhite", "chessBoardCellChocolate");
+letters("lettersContainer", "div", "lettersUnits"); //Расставляем буквы
+numbers("numbersContainer", "div", "numbersUnits"); //Расставляем цыфры
+BoardCell("chessBoard", "div", "chessBoardCellWhite", "chessBoardCellChocolate"); //расставляем ячейки с цветами на тоску
