@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.letters, .lettersFooter {
+  width: 100%;
+  height: 50px;
+  background: antiquewhite;
+  display: flex;
+  align-items: flex-end;
+
+  .lettersContainer {
+    width: 816px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .lettersUnits {
+      display: flex;
+      justify-content: center;
+      width: 100px;
+      //border: 1px solid black;
+    }
+  }
+}
+
+.lettersFooter {
+  align-items: flex-start;
+}
+
+.numbers {
+  width: 100px;
+  background: cornsilk;
+  flex-grow: 1;
+
+  .numbersUnits, .numbersUnitsFooter {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 5px;
+  }
+
+  .numbersUnitsFooter {
+    align-items: flex-start;
+    padding-left: 5px;
+  }
+}
+
+.chessBoard {
+  width: 816px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .chessBoardCell {
+    width: 100px;
+    height: 90px;
+    border: 1px solid black;
+  }
+
+  .chessBoardCellWhite:nth-child(2n){
+    background: chocolate;
+  }
+
+  .chessBoardCellChocolate:nth-child(2n+1){
+    background: chocolate;
+  }
+}
+
