@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="container headerInside">
+            <div class="logo">
+                BRAN<span>D</span>
+            </div>
+            <form class="searchWrap">
+                <div class="searchBrowse">
+                    Browse
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <input placeholder="Search for Item..." type="text">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <img class="headerCart" src="img/cart.png" alt="">
+            <button class="accountBtn">
+                My Account
+                <i class="fas fa-caret-down"></i>
+            </button>
+        </div>
+    </header>
+    <nav class="topNav">
+        <a href="">Home</a>
+        <a href="">Man</a>
+        <a href="">Women</a>
+        <a href="">Kids</a>
+        <a href="">Accoseriese</a>
+        <a href="">Featured</a>
+        <a href="">Hot Deals</a>
+    </nav>
+    <div class="topBannerWrapCart">
+        <div class="container topBannerContentCart">
+                <div class="Arrivals">New Arrivals</div>
+                <div class="ArrivalsBreadCrumbs">Home / Men / <span>New Arrivals</span> </div>
+        </div>
+    </div>
+    <div id="main" class="container main">
+        <div class="productsNameColumn">
+            <div class="productDetails">product Details</div>
+            <div class="productsNameColumnWidth unitePrice">unite Price</div>
+            <div class="productsNameColumnWidth quantity">Quantity</div>
+            <div class="productsNameColumnWidth shipping">shipping</div>
+            <div class="productsNameColumnWidth subtotal">Subtotal</div>
+            <div class="productsNameColumnWidth action">ACTION</div>
+        </div>
+        <div class="lineForProducts"></div>
+        <div class="productsDescrColumn">
+            <div class="productcCart">
+                <img src="img/product1.jpg" alt="">
+                <div>
+                    <div class="descrProduct">
+                        Mango  People  T-shirt
+                    </div>
+                    <div class="descrColorAndSize">
+                        Color:   <span>Red</span>
+                    </div>
+                    <div class="descrColorAndSize">
+                        Size:   <span>Xll</span>
+                    </div>
+                </div>
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                $150
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                2
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                FREE
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                $300
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                <button>Button</button>
+            </div>
+        </div>
+        <div class="lineForProducts"></div>
+        <div class="productsDescrColumn">
+            <div class="productcCart">
+                <img src="img/product2.jpg" alt="">
+                <div>
+                    <div class="descrProduct">
+                        Mango  People  T-shirt
+                    </div>
+                    <div class="descrColorAndSize">
+                        Color:   <span>Red</span>
+                    </div>
+                    <div class="descrColorAndSize">
+                        Size:   <span>Xll</span>
+                    </div>
+                </div>
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                $150
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                2
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                FREE
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                $300
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                <button>Button</button>
+            </div>
+        </div>
+        <div class="lineForProducts"></div>
+        <div class="productsDescrColumn">
+            <div class="productcCart">
+                <img src="img/product3.jpg" alt="">
+                <div>
+                    <div class="descrProduct">
+                        Mango  People  T-shirt111
+                    </div>
+                    <div class="descrColorAndSize">
+                        Color:   <span>Red</span>
+                    </div>
+                    <div class="descrColorAndSize">
+                        Size:   <span>Xll</span>
+                    </div>
+                </div>
+            </div>
+            <div class="productsNameColumnWidth uniteColumn priceProduct">
+                $350
+            </div>
+            <div class="productsNameColumnWidth uniteColumn numbersProduct">
+                2
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                FREE
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                $300
+            </div>
+            <div class="productsNameColumnWidth uniteColumn">
+                <button>Button</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="container productsBotton">
+        <button class="buttonForProduct">cLEAR SHOPPING CART</button>
+        <button class="buttonForProduct">cONTINUE sHOPPING</button>
+    </div>
+    <div class="container section">
+        <div class="unitshippnigAdress">
+            <span>Shipping Adress</span>
+            <form action method="post">
+                <label for="iTcountry"></label>
+                <input required id="iTcountry" list="country" placeholder="Bangladesh">
+                <datalist id="country">
+                    <option label="Россия" value="russia"></option>
+                    <option label="США" value="usa"></option>
+                    <option label="Франция" value="france"></option>
+                    <option label="Китай" value="china"></option>
+                </datalist>
+                <input required type="text" placeholder="State">
+                <input required type="number" placeholder="Postcode / Zip">
+                <input type="button" value="get a quote">
+            </form>
+        </div>
+        <div class="unitcouponDiscout">
+            <span>coupon  discount</span>
+            <form action method="post">
+                <label for="yuorStat">Enter your coupon code if you have one</label>
+                <input id="yuorStat" type="text" placeholder="State">
+                <input type="button" value="Apply coupon">
+            </form>
+        </div>
+        <div class="unitgrandTotal">
+            <span>Sub total         $900</span>
+            <div id="SubTotal">
+
+            </div>
+            <span>GRAND TOTAL</span> <span>$900</span>
+            <div class="lineUnderGrandTotal"></div>
+            <input type="button" value="proceed to checkout">
+        </div>
+    </div>
+
+    <div class="bodySubscribe">
+        <div class="container bodySubscribeContainer">
+            <div class="bodySubscribeBlock1">
+                <div class="bodySubscribeBlock1Text">
+                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                </div>
+                    <span>
+                    Bin Burhan
+                </span>
+                <p>
+                    Dhaka, Bd
+                </p>
+            </div>
+            <div class="bodySubscribeLine"></div>
+            <div class="bodySubscribeBlock2">
+                <div class="textSabscribe">
+                    Subscribe
+                </div>
+                <div class="texForSabscribe">
+                    FOR OUR NEWLETTER AND PROMOTION
+                </div>
+                <div class="bodySubscribeBlock2Search">
+                    <label for="yuormail"></label>
+                    <input type="text" id="yuormail" placeholder="Enter Your Email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footerUnit">
+        <div class="ColbrandDescrip">
+            <div class="rowBrand">
+                <div class="logo">
+                    BRAN<span>D</span>
+                </div>
+            </div>
+            <div class="rowTextBrand">
+                Objectively transition extensive data rather than cross functional
+                solutions. Monotonectally syndicate multidisciplinary materials
+                before go forward benefits. Intrinsicly syndicate an expanded array
+                of processes and cross-unit partnerships.
+                <br><br>
+                Efficiently plagiarize 24/365 action items and focused infomediaries.
+                Distinctively seize superior initiatives for wireless technologies.
+            </div>
+        </div>
+        <div class="colMenu">
+            <div class="menuTextFooter">
+                COMPANY
+            </div>
+            <div class="menuFooter">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">How It Works</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="colMenu">
+            <div class="menuTextFooter">
+                INFORMATION
+            </div>
+            <div class="menuFooter">
+                <a href="#">Tearms & Condition</a>
+                <a href="#"> Privacy Policy</a>
+                <a href="#"> How to Buy</a>
+                <a href="#">How to Sell</a>
+                <a href="#">Promotion</a>
+            </div>
+        </div>
+        <div class="colMenu">
+            <div class="menuTextFooter">
+                SHOP CATEGORY
+            </div>
+            <div class="menuFooter">
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Child</a>
+                <a href="#">Apparel</a>
+                <a href="#">Brows All</a>
+            </div>
+        </div>
+    </div>
+    <div class="containerFooter">
+        <div class="footerNetwork">
+            <div class="CopyBrand">
+                &copy; 2017  Brand  All Rights Reserved.
+            </div>
+            <div class="foterSocial">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <script src="les6old.js"></script>
+</body>
+</html>
