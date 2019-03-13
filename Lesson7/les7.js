@@ -10,6 +10,7 @@ var snake = [];
 var snakeCoordX;//Координаты головы нашей змейки
 var snakeCoordY;//Координаты головы нашей змейки
 var snakeInterval;
+var score = 0;
 var direction = "top";//Направление змейки
 
 function init() {
@@ -24,7 +25,7 @@ function init() {
 }
 //Обработка нажатия клавиш
 function handleDirectionChange(event) {
-    console.log(event.keyCode);
+    //console.log(event.keyCode);
     switch (event.keyCode) {
         case 37:{//влево
             if(direction !== "right") direction = "left";
@@ -51,28 +52,84 @@ function move() {
 
     switch(direction){
         case "top":{
-            $newUnit = $gameTable.children[--snakeCoordY].children[snakeCoordX];
+            //$newUnit = $gameTable.children[--snakeCoordY].children[snakeCoordX];
+            snakeCoordY--;
             break;
         }
         case "bottom":{
-            $newUnit = $gameTable.children[++snakeCoordY].children[snakeCoordX];
+            //$newUnit = $gameTable.children[++snakeCoordY].children[snakeCoordX];
+            snakeCoordY++;
             break;
         }
         case "left":{
-            $newUnit = $gameTable.children[snakeCoordY].children[--snakeCoordX];
+            //$newUnit = $gameTable.children[snakeCoordY].children[--snakeCoordX];
+            snakeCoordX--;
             break;
         }
         case "right":{
-            $newUnit = $gameTable.children[snakeCoordY].children[++snakeCoordX];
+            //$newUnit = $gameTable.children[snakeCoordY].children[++snakeCoordX];
+            snakeCoordX++;
             break;
         }
     }
 
-    $newUnit.classList.add("snake-unit");//добавляем класс для оформления
-    snake.push($newUnit);//добавляем в массив змейки новую ячейку
+    if (!inBounds()) {
+        gameOver();
+    }
 
-    var $snakeRemoved = snake.shift();
-    $snakeRemoved.classList.remove("snake-unit");
+    $newUnit = $gameTable.children[snakeCoordY].children[snakeCoordX];
+
+    if (!isSnakeUnit($newUnit) && inBounds())  {
+        $newUnit.classList.add("snake-unit");//добавляем класс для оформления
+        snake.push($newUnit);//добавляем в массив змейки новую ячейку
+
+        if (!isFood($newUnit)) {
+            var $snakeRemoved = snake.shift();
+            $snakeRemoved.classList.remove("snake-unit");
+        }
+    } else {
+        gameOver();
+    }
+}
+
+//Game over
+function gameOver() {
+    alert("Вы проиграли");
+    clearInterval(snakeInterval);
+
+    for (var i = 0; i < snake.length; i++) {
+        snake[i].classList.remove("snake-unit")
+    }
+    var $foodUnits = document.getElementsByClassName("food-unit");
+    for (var i = 0; i < $foodUnits.length; i++) {
+        $foodUnits[i].classList.remove("food-unit");
+    }
+
+    snake = [];
+    direction = "top";
+    snake_speed = 500;
+}
+
+//Проверяем, есть ли новый узел в самой змейке
+function isSnakeUnit(unit) {
+    return snake.includes(unit);
+}
+
+//Располагается ли змейка в границах нашего поля
+function inBounds() {
+    return snakeCoordX >= 0 && snakeCoordX < FIELD_SIZE_X && snakeCoordY >=0 && snakeCoordY < FIELD_SIZE_Y;
+}
+
+//Проверяем еда ли эта ячейка
+function isFood(unit) {
+    if (unit.classList.contains("food-unit")) {
+        unit.classList.remove("food-unit");
+        document.getElementById("score").textContent = ++score;
+        createFood();
+        return true;
+    }
+
+    return false;
 }
 
 //Создаем еду для змейки
