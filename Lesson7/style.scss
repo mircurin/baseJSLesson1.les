@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.field {
+  width: 321px;
+  background: black;
+  border: 1px solid green;
+}
+
+.action-button {
+  width: 150px;
+  padding: 15px;
+  color: white;
+  background: green;
+  text-align: center;
+  float: left;
+  margin-right: 22px;
+}
+
+.game-table {
+  border-collapse: collapse;
+
+  .game-table-row {
+      .game-table-cell {
+        width: 15px;
+        height: 15px;
+        border: 1px dotted #636363;
+        border-collapse: collapse;
+      }
+  }
+}
+
+.snake-unit {
+  background: chocolate;
+}
