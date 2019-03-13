@@ -23,8 +23,26 @@ function init() {
     buildGameField();
 }
 //Обработка нажатия клавиш
-function handleDirectionChange() {
-
+function handleDirectionChange(event) {
+    console.log(event.keyCode);
+    switch (event.keyCode) {
+        case 37:{//влево
+            if(direction !== "right") direction = "left";
+            break;
+        }
+        case 38:{//вверх
+            if(direction !== "bottom") direction = "top";
+            break;
+        }
+        case 39:{//вправо
+            if(direction !== "left") direction = "right";
+            break;
+        }
+        case 40:{//вниз
+            if(direction !== "top") direction = "bottom";
+            break;
+        }
+    }
 }
 
 //Перемещение змейки
@@ -57,6 +75,27 @@ function move() {
     $snakeRemoved.classList.remove("snake-unit");
 }
 
+//Создаем еду для змейки
+function createFood() {
+    var foodCreate = false;//пременная для ...
+
+    while (!foodCreate) {
+        //Задаем координаты для размещения еды
+        var foodX = Math.floor(Math.random() * FIELD_SIZE_X);
+        var foodY = Math.floor(Math.random() * FIELD_SIZE_Y);
+
+        //Находим эту ячейку по координатам
+        var $foodCell = $gameTable.children[foodY].children[foodX];
+
+        //Проверяем, является ли эта ячейка змейкой или нет?
+        if (!$foodCell.classList.contains("snake-unit")) {
+            //Если класс от змейки не нашли, то создаем класс для еды
+            $foodCell.classList.add("food-unit");
+            foodCreate = true;
+        }
+    }
+}
+
 //Рисуем змейку на поле
 function respawn() {
     snakeCoordX = Math.floor(FIELD_SIZE_X / 2);
@@ -78,6 +117,7 @@ function handleGameStart() {
     respawn();
 
     snakeInterval = setInterval(move, snake_speed);
+    createFood();
 }
 
 function handleNewGame() {
