@@ -20,6 +20,7 @@ var cart = [];
 
 var $cart = document.getElementById("cart");
 var $catalog = document.getElementById("catalog");
+
 $catalog.addEventListener("click", handleByClick);
 
 function getProductIndex(name) {
@@ -33,7 +34,9 @@ function getProductIndex(name) {
 }
 
 function handleByClick(event) {
-    if (event.target.tagName === "BUTTON") {
+    
+    console.log(event.target.id);
+    if (event.target.id === "addProduct") {
         var $product = event.target.parentElement;
         var name = $product.querySelector(".title").textContent;
         var price = +$product.querySelector(".price").textContent;
