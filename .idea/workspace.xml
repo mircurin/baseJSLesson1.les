@@ -17,19 +17,13 @@
       <file leaf-file-name="les6.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lesson6/les6.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+            <state relative-caret-position="289">
+              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
               <folding>
                 <element signature="e#15#931#0" />
                 <element signature="e#21#318#0" />
                 <element signature="e#324#610#0" />
                 <element signature="e#616#929#0" />
-                <element signature="n#!!block;n#getProductIndex#0" />
-                <element signature="e#1222#1297#0" />
-                <element signature="e#1259#1291#0" />
-                <element signature="e#1710#1900#0" />
-                <element signature="e#1711#1751#0" />
-                <element signature="e#1906#2035#0" />
                 <element signature="n#!!block;n#buildTotal#0" />
                 <element signature="e#2158#2219#0" />
                 <element signature="e#2248#2301#0" />
@@ -100,9 +94,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1136" />
-    <option name="width" value="788" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1141" />
+    <option name="width" value="783" />
     <option name="height" value="1045" />
   </component>
   <component name="ProjectView">
@@ -209,22 +203,22 @@
       <workItem from="1550829622105" duration="8325000" />
       <workItem from="1550837998631" duration="38000" />
       <workItem from="1551037662296" duration="751000" />
-      <workItem from="1552460274094" duration="12715000" />
+      <workItem from="1552460274094" duration="18839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72699000" />
+    <option name="totallyTimeSpent" value="78823000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="913" y="0" width="626" height="836" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.54263055" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32905984" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -241,6 +235,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -477,19 +497,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lesson6/les6.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="289">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
           <folding>
             <element signature="e#15#931#0" />
             <element signature="e#21#318#0" />
             <element signature="e#324#610#0" />
             <element signature="e#616#929#0" />
-            <element signature="n#!!block;n#getProductIndex#0" />
-            <element signature="e#1222#1297#0" />
-            <element signature="e#1259#1291#0" />
-            <element signature="e#1710#1900#0" />
-            <element signature="e#1711#1751#0" />
-            <element signature="e#1906#2035#0" />
             <element signature="n#!!block;n#buildTotal#0" />
             <element signature="e#2158#2219#0" />
             <element signature="e#2248#2301#0" />

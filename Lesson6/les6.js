@@ -34,23 +34,51 @@ function getProductIndex(name) {
 }
 
 function handleByClick(event) {
-    
-    console.log(event.target.id);
-    if (event.target.id === "addProduct") {
+
+    console.log(event.target.id);///
+
+    if (event.target.tagName === "BUTTON") {//Убеждаемся что это BUTTON
+        buttonFlag = buttonAddorDel(event);//Проверка на id button
+        console.log(buttonFlag);///
         var $product = event.target.parentElement;
         var name = $product.querySelector(".title").textContent;
         var price = +$product.querySelector(".price").textContent;
 
         var idx = getProductIndex(name);
+
         if (idx === -1) {//если товара еще нет в cart( в Корзине)
             //Товара нет в корзине cart, то добавляем этот товар в корзину
-            cart.push({name: name, price: price, quantity: 1});
+            productAddorAlert(buttonFlag, price, name);
         } else {
             //Обращаемся к товару в корзине по индексу и увеличиваем его количество
-            cart[idx].quantity++;
+            productquantity(buttonFlag, idx);
         }
+        console.log(cart);
         buildTotal(cart);
     }
+}
+
+function productquantity(buttonFlag, idx) {
+    if (buttonFlag) {
+        cart[idx].quantity++;
+    } else {
+        cart[idx].quantity--;
+        if (cart[idx].quantity === 0) {//Проверяем на количество. Если количество = 0, то удаляем запись из массива
+            cart.splice(idx, 1);
+        }
+    }
+}
+
+function productAddorAlert(buttonFlag, price, name) {
+    if (buttonFlag) {
+        cart.push({name: name, price: price, quantity: 1});
+    } else {
+        alert("В корзине такой товар отсутствует!");
+    }
+}
+
+function buttonAddorDel(buttonEvent) {
+    return buttonEvent.target.id === "addProduct";
 }
 
 function buildTotal(cart) {
